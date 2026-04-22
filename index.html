@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Route Navigator</title>
+  <meta name="theme-color" content="#146c43">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Bus Routes">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <p class="eyebrow">Sub Driver Navigation</p>
+      <h1>Open the right school bus route in Google Maps fast.</h1>
+      <p class="lede">
+        Choose a pre-entered route, review the stop order, and launch turn-by-turn directions.
+      </p>
+    </section>
+
+    <section class="panel">
+      <label class="field-label" for="routeSelect">Saved route</label>
+      <div class="route-picker">
+        <select id="routeSelect" aria-label="Select a saved route"></select>
+        <button id="openMapsButton" class="primary-button">Open in Google Maps</button>
+      </div>
+      <button id="installButton" class="secondary-button hidden" type="button">Install on this phone</button>
+
+      <div class="route-meta">
+        <div>
+          <span class="meta-label">School</span>
+          <p id="schoolName" class="meta-value"></p>
+        </div>
+        <div>
+          <span class="meta-label">Bus yard / start</span>
+          <p id="startPoint" class="meta-value"></p>
+        </div>
+        <div>
+          <span class="meta-label">Final stop</span>
+          <p id="endPoint" class="meta-value"></p>
+        </div>
+      </div>
+
+      <div class="stops-card">
+        <div class="stops-header">
+          <h2>Stops in order</h2>
+          <p id="stopCount"></p>
+        </div>
+        <ol id="stopsList" class="stops-list"></ol>
+      </div>
+    </section>
+
+    <section class="panel secondary-panel">
+      <h2>How to add more routes</h2>
+      <p>
+        Edit the <code>routes</code> list in <code>app.js</code>. Each route needs a name, school,
+        start address, end address, and stop addresses in the order you drive them.
+      </p>
+      <p class="install-note">
+        To install this on your phone, host these files on a simple website and then use your browser's
+        <strong>Add to Home Screen</strong> option.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Bus Route Navigator",
+  "short_name": "Bus Routes",
+  "description": "Choose a saved school bus route and open it in Google Maps.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#eef4f1",
+  "theme_color": "#146c43",
+  "orientation": "portrait",
+  "icons": []
+}

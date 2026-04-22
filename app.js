@@ -1,8 +1,7 @@
 const routes = [
-
   {
     id: "Route 7 AM",
-    name: "",
+    name: "Route 7 AM",
     school: "Route 7 AM",
     start: "",
     end: "",
